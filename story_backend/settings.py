@@ -17,6 +17,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'rest_framework',
     'corsheaders',
+   'api', 
 ]
 
 MIDDLEWARE = [
@@ -30,7 +31,15 @@ MIDDLEWARE = [
     'corsheaders.middleware.CorsMiddleware',
 ]
 
-CORS_ALLOWED_ORIGINS = ['http://localhost:8081']
+CORS_ALLOWED_ORIGINS = [
+    'http://localhost:8081',
+    'http://10.0.2.2:8000',
+    'http://192.168.0.100:8000',
+]
+
+CORS_ALLOWED_METHODS = [ 
+    'GET', 'POST', 'OPTIONS'
+]
 
 ROOT_URLCONF = 'story_backend.urls'
 
